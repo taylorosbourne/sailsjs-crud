@@ -19,13 +19,13 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
-  '/articles/list': {controller: 'ArticlesController', action: 'list'},
-  '/articles/add': {controller: 'ArticlesController', action: 'add'},
-  '/articles/create': {controller: 'ArticlesController', action: 'create'},
-  '/articles/delete/:id': {controller: 'ArticlesController', action: 'delete'},
-  '/articles/edit/:id': {controller: 'ArticlesController', action: 'edit'},
-  '/articles/update/:id': {controller: 'ArticlesController', action: 'update'},
+  'GET /': { view: 'pages/homepage' },
+  'GET /articles/list': {controller: 'ArticlesController', action: 'list'},
+  'GET /articles/add': {controller: 'ArticlesController', action: 'add'},
+  'POST /articles/create': {controller: 'ArticlesController', action: 'create'},
+  'POST /articles/delete/:id': {controller: 'ArticlesController', action: 'delete'},
+  'GET /articles/edit/:id': {controller: 'ArticlesController', action: 'edit'},
+  'POST /articles/update/:id': {controller: 'ArticlesController', action: 'update'},
 
 
   /***************************************************************************
