@@ -18,7 +18,6 @@ module.exports = {
     create: (req, res) => {
         const title = req.body.title;
         const body = req.body.body;
-
         Articles.create({ title, body }).exec((err) => {
             if (err) {
                 res.send(500, { err });
@@ -41,13 +40,11 @@ module.exports = {
                 res.send(500, { err })
             }
             res.view('pages/edit', { article })
-
         })
     },
     update: (req, res) => {
         const title = req.body.title;
         const body = req.body.body;
-
         Articles.update({ id: req.params.id }, { title, body }).exec((err) => {
             if (err) {
                 res.send(500, { err });
